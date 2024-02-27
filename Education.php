@@ -7,18 +7,19 @@ $password = $_POST['password'];
 $servername = "localhost";
 $email = "your_email";
 $password = "your_password";
-$dbname = "your_database_name";
+$dbname = "db2";
 
 //establish connection using info
-$conn = new mysqli($servername, $email, $password, $dbname);
-
+$conn = new mysqli($servername, 'root', ' ');
+    or die ('Could not connect: ' . mysql_error());
+    
 //check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
 //prepare insert statement
-$stmt = $conn->prepare("INSERT INTO users (email, password) VALUES (?, ?)");
+$stmt = $conn->prepare("INSERT INTO student (email, password) VALUES (?, ?)");
 $stmt->bind_param("ss", $email, $password);
 
 //execute and check
