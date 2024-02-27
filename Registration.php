@@ -1,4 +1,10 @@
 <?php
+//validate data
+if (!isset($_POST['username']) || !isset($_POST['password'])) {
+    echo "Username and password are required.";
+    exit;
+}
+
 //take email and password
 $email = $_POST['Email'];
 $password = $_POST['password'];
