@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <h1> University Website </h1> 
-        <h2> Login </h2>
-        <p> Email: <input type="text"> </p>
-        <p> Password:  <input type="text"> </p>
-        <p><button>Sign in</button></p>
-        <button>Register</button>
-
-        </body>
+    <h2>User Registration</h2>
+    <form action="register.php" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Register">
+    </form>
 </html>
