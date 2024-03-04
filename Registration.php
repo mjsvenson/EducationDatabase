@@ -1,6 +1,6 @@
 <?php
 //validate data
-if (!isset($_POST['username']) || !isset($_POST['password'])) {
+if (!isset($_POST['Email']) || !isset($_POST['password'])) {
     echo "Username and password are required.";
     exit;
 }
