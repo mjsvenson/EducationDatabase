@@ -26,9 +26,13 @@ if ($conn->connect_error) {
 $stmt = $conn->prepare("INSERT INTO account (email, password, type) VALUES (?, ?, ?)");
 $stmt->bind_param("sss", $email, $password, $student);
 
+$SignIn_page = "SignIn.html";
+
 //execute and check
 if ($stmt->execute()) {
     echo "Registration successful!";
+    header("Location: $SignIn_page");
+
 } else {
     echo "Error: " . $stmt->error;
 }
