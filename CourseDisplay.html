@@ -26,9 +26,7 @@
     $dbname = "db2";
     $student = "student";
 
-
-    
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername, 'root', '', $dbname);
 
     // Check connection
     if ($conn->connect_error) {
