@@ -26,12 +26,13 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM account WHERE email = '$email' AND password = '$password'";
 $result = $conn->query($sql);
 
-$SignIn_page = "SignIn.html";
+$StudentHome_page = "StudentHomepage.html";
 
 //execute and check
 if ($result->num_rows > 0) {
     // Credentials found, do something
     echo "Credentials found!";
+    header("Location: $StudentHome_page");
 } else {
     // No match found for the given credentials
     echo "Invalid credentials!";
