@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <h1>University Website</h1>
+    <h2>User Registration</h2>
+    <form action="Registration.php" method="post">
+        <label for="Email">Email:</label><br>
+        <input type="text" id="Email" name="Email"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Register">
+    </form>
+</html>
+
 <?php
 //validate data
 if (!isset($_POST['Email']) || !isset($_POST['password'])) {
