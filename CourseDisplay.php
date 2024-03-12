@@ -18,6 +18,7 @@
         <th>Instructor ID</th>
         <th>Classroom ID</th>
         <th>Time Slot ID</th>
+        <th>Action</th> <!-- New column for the registration button -->
     </tr>
 
     <?php
@@ -51,6 +52,7 @@
             echo "<td>" . $row["instructor_id"] . "</td>";
             echo "<td>" . $row["classroom_id"] . "</td>";
             echo "<td>" . $row["time_slot_id"] . "</td>";
+            echo "<td><a href='ClassRegistration.php?section_id=" . $row["section_id"] . "'>Register</a></td>"; // Registration button with section_id as parameter
             echo "</tr>";
         }
     } else {
