@@ -38,3 +38,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration</title>
+</head>
+<body>
+    <h2>Course Registration</h2>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <label for="student_id">Student ID:</label><br>
+        <input type="text" id="student_id" name="student_id"><br>
+        <label for="course_id">Course ID:</label><br>
+        <input type="text" id="course_id" name="course_id"><br>
+        <label for="section_id">Section ID:</label><br>
+        <input type="text" id="section_id" name="section_id"><br>
+        <label for="semester">Semester:</label><br>
+        <input type="text" id="semester" name="semester"><br>
+        <label for="year">Year:</label><br>
+        <input type="text" id="year" name="year"><br><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
