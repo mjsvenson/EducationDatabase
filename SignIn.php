@@ -46,15 +46,29 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM account WHERE email = '$email' AND password = '$password'";
 $result = $conn->query($sql);
 
-$StudentHome_page = "StudentHomepage.php";
+$Home_page = "StudentHomepage.php";
 
 //execute and check
 if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $accountType = $row['type'];
     // Credentials found, do something
     echo "Credentials found!";
     $_SESSION['Email'] = $email;
     $_SESSION['password'] = $password;
-    header("Location: $StudentHome_page");
+
+    if ($accountType == "admin") {
+        $Home_page = "AdminHomepage.php";
+    } elseif ($accountType == "instructor") {
+        $Home_page = "InstructorHomepage.php";
+    } elseif ($accountType == "student") {
+        $Home_page = "StudentHomepage.php";
+    } else {
+        echo "Error: Account has bad type: $Home_page";
+        exit;
+    }
+
+    header("Location: $Home_page");
 
 } else {
     // No match found for the given credentials
