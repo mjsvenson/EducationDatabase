@@ -1,3 +1,7 @@
+<?php
+//start the session
+session_start();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -48,6 +52,8 @@ $StudentHome_page = "StudentHomepage.php";
 if ($result->num_rows > 0) {
     // Credentials found, do something
     echo "Credentials found!";
+    $_SESSION['Email'] = $email;
+    $_SESSION['password'] = $password;
     header("Location: $StudentHome_page");
 
 } else {
