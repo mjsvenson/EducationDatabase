@@ -75,12 +75,6 @@ if ($result->num_rows > 0) {
     echo "Invalid credentials!";
 }
 
-function LoginInfo($getorset , $email, $password) {
-    if ($getorset == 0) {
-        
-    }
-}
-
 //close connection
 $conn->close();
 
