@@ -8,7 +8,10 @@
         <label for="name">name:</label><br>
         <input type="text" id="student_name" name="student_name"><br>
         <label for="dept_name">dept_name:</label><br>
-        <input type="text" id="dept_name" name="dept_name"><br>
+        <select name="dept_name" id="dept_name">
+            <option value="Miner School of Computer & Information Sciences">Miner School of Computer & Information Sciences</option>
+        </select>
+        <p></p>
         <label for="student_id">ID:</label><br>
         <input type="text" id="student_id" name="student_id"><br>
         <label for="password">Password:</label><br>

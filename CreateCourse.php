@@ -1,14 +1,7 @@
-<?php
-// Start the session
-session_start();
-$name = $_SESSION['Email'];
-?>
-
 <!DOCTYPE html>
 <html>
     <h1>University Website</h1>
-    <h2>Admin Homepage</h2>
-    <a href="CreateCourse.php"><button> Create new Course </button></a>
+    <h2>Admin Create Course</h2>
     <?php echo "Hello $name";?>
     <p></p>
 </html>
