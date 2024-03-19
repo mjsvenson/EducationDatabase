@@ -9,6 +9,7 @@ $name = $_SESSION['Email'];
     <h1>University Website</h1>
     <h2>Admin Homepage</h2>
     <a href="CreateCourse.php"><button> Create new Course </button></a>
+    <a href="AddAdvisor.php"><button> Appoint an Advisor </button></a>
     <?php echo "Hello $name";?>
     <p></p>
 </html>
