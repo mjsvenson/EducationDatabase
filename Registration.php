@@ -70,19 +70,17 @@ $stmt_student = $conn->prepare("INSERT INTO student (student_id, name, email, de
 $stmt_student->bind_param("ssss", $student_id, $student_name, $email, $dept);
 
 if ($stmt_student->execute()) {
-    echo "Registration successful!";
+    echo "Student registration successful!";
 } else {
     echo "Error: " . $stmt_student->error;
 }
 
 //execute and check
 if ($stmt->execute()) {
-    echo "Registration successful!";
+    echo "Account registration successful!";
 } else {
     echo "Error: " . $stmt->error;
 }
-
-echo $degree;
 
 switch ($degree) {
     case 'undergraduate':
