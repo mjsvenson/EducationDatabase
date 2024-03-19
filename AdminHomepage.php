@@ -10,6 +10,8 @@ $name = $_SESSION['Email'];
     <h2>Admin Homepage</h2>
     <a href="CreateCourse.php"><button> Create new Course </button></a>
     <a href="AddAdvisor.php"><button> Appoint an Advisor </button></a>
+    <a href="AssignTAtoSection.php"><button> Assign TA to section </button></a>
+
     <?php echo "Hello $name";?>
     <p></p>
 </html>
