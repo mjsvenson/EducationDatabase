@@ -8,8 +8,8 @@ $name = $_SESSION['Email'];
 <html>
     <h1>University Website</h1>
     <h2>Admin Homepage</h2>
-    <a href="CreateCourse.php"><button> Create new Course </button></a>
-    <a href="AddAdvisor.php"><button> Appoint an Advisor </button></a>
+    <a href="CreateCourse.php"><button> Create new Course </button></a><br></br>
+    <a href="AddAdvisor.php"><button> Appoint an Advisor </button></a><br></br>
     <a href="AssignTAtoSection.php"><button> Assign TA to section </button></a>
 
     <?php echo "Hello $name";?>

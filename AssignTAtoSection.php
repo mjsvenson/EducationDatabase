@@ -15,15 +15,13 @@ $name = $_SESSION['Email'];
         <label for="course_id">Course ID:</label><br>
         <input type="text" id="course_id" name="course_id" required><br>
         <label for="section_id">Section ID:</label><br>
-        <input type="date" id="section_id" name="section_id" required><br>
+        <input type="text" id="section_id" name="section_id" required><br>
         <label for="semester">Semester:</label><br>
-        <input type="date" id="semester" name="semester"><br><br>
+        <input type="text" id="semester" name="semester"><br><br>
         <label for="year">Year:</label><br>
-        <input type="date" id="year" name="year"><br><br>
+        <input type="text" id="year" name="year"><br><br>
         <input type="submit" value="Assign TA to Section">
     </form>
-
-    <p></p>
 </html>
 
 <?php
@@ -51,7 +49,7 @@ $stmt->bind_param("sssss", $student_id, $course_id, $section_id, $semester, $yea
 
     // Execute statement
     if ($stmt->execute() === TRUE) {
-        echo "Registration successful!";
+        echo "Assignment successful!";
     } else {
         echo "Error: " . $conn->error;
     }
