@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare and bind statement
     $stmt = $conn->prepare("INSERT INTO take (student_id, course_id, section_id, semester, year) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssis", $student_id, $course_id, $section_id, $semester, $year);
+    $stmt->bind_param("sssss", $student_id, $course_id, $section_id, $semester, $year);
 
     // Execute statement
     if ($stmt->execute() === TRUE) {
