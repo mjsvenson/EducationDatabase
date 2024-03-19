@@ -13,7 +13,15 @@
         <label for="credits">credits:</label><br>
         <input type="text" id="credits" name="credits"><br>
         <label for="instructor">instructor:</label><br>
-        <input type="text" id="instructor" name="instructor"><br>
+        <input type="text" id="instructor_id" name="instructor"><br>
+        <label for="semester">semester:</label><br>
+        <input type="text" id="semester" name="semester"><br>
+        <label for="year">year:</label><br>
+        <input type="text" id="year (Constraint)" name="year"><br>
+        <label for="classroom_id">classroom_id:</label><br>
+        <input type="text" id="classroom_id" name="classroom_id"><br>
+        <label for="time_slot_id">time_slot_id:</label><br>
+        <input type="text" id="time_slot_id (Constraint)" name="time_slot_id"><br>
         <p></p>
         <input type="submit" value="CreateCourse">
     </form>
@@ -28,6 +36,10 @@ $section_id = $_POST['section_id'];
 $course_name = $_POST['course_name'];
 $credits = $_POST['credits'];
 $instructor = $_POST['instructor'];
+$semester = $_POST['semester'];
+$year = $_POST['year'];
+$classroom_id = $_POST['classroom_id'];
+$time_slot_id = $_POST['time_slot_id'];
 
 
 //enter server info
@@ -44,6 +56,15 @@ if ($conn->connect_error) {
 
 $stmt = $conn->prepare("INSERT INTO course (course_id, course_name, credits) VALUES (?, ?, ?)");
 $stmt->bind_param("ssi", $course_id, $course_name, $credits);
+
+if ($stmt->execute()) {
+    echo "Course Creation Successful!";
+} else {
+    echo "Error: " . $stmt->error;
+}
+
+$stmt = $conn->prepare("INSERT INTO section (course_id, section_id, semester, year, instructor_id, classroom_id, time_slot_id) VALUES (?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("sssssss", $course_id, $section_id, $semester, $year, $instructor_id, $classroom_id, $time_slot_id );
 
 if ($stmt->execute()) {
     echo "Course Creation Successful!";
