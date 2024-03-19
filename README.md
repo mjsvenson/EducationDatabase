@@ -31,8 +31,8 @@ A student may serve as a grader for only one section. (10 points)
 8. The admin or instructor can appoint one or two instructors as advisor(s) for PhD
 students, including a start date, and optional end date. The advisor will be able to view
 the course history of their advisees, and update their advisees’ information. (10 points)
-9. Student-proposed functionality #1 (10 points)
-10. Student-proposed functionality #2 (10 points)
+9. Create a grader page where graders can edit grades and see the grades they have given students (10 points)
+10. Create a department page for admin that displays the departments instructors and the students within that department (10 points)
 
 To run this code:
 1. Make sure the correct files are in the XAMPP file directory (something like):
