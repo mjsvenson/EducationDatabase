@@ -57,14 +57,31 @@ if ($result->num_rows > 0) {
     $_SESSION['Email'] = $email;
     $_SESSION['password'] = $password;
 
+    //set homepage based on account type
     if ($accountType == "admin") {
+
         $Home_page = "AdminHomepage.php";
+
     } elseif ($accountType == "instructor") {
+        
         $Home_page = "InstructorHomepage.php";
+        //get id
+        $sql = "SELECT * FROM instructor WHERE email = '$email'";
+        $result = $conn->query($sql);
+        $row = $result->fetch_assoc();
+        $_SESSION['ID'] = $row['instructor_id'];
+
     } elseif ($accountType == "student") {
+
         $Home_page = "StudentHomepage.php";
+        //get id
+        $sql = "SELECT * FROM student WHERE email = '$email'";
+        $result = $conn->query($sql);
+        $row = $result->fetch_assoc();
+        $_SESSION['ID'] = $row['student_id'];
+
     } else {
-        echo "Error: Account has bad type: $Home_page";
+        echo "Error: Account has bad type: $accountType";
         exit;
     }
 
