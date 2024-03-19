@@ -96,8 +96,8 @@ switch ($degree) {
         echo "inserted into master";
         break;
     case 'phd':
-        $stmt_degree = $conn->prepare("INSERT INTO phd (student_id) VALUES (?)");
-        $stmt_degree->bind_param("sis", $student_id, $zero_test, $freshman_test);
+        $stmt_degree = $conn->prepare("INSERT INTO PhD (student_id, qualifier, proposal_defence_date, dissertation_defence_date) VALUES (?, ?, ?, ?)");
+        $stmt_degree->bind_param("ssss", $student_id, $zero_test, $zero_test, $zero_test);
         echo "inserted into phd";
         break;
 }
