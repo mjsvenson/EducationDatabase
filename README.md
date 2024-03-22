@@ -32,7 +32,7 @@ A student may serve as a grader for only one section. (10 points)
 students, including a start date, and optional end date. The advisor will be able to view
 the course history of their advisees, and update their advisees’ information. (10 points)
 9. Create a grader page where graders can edit grades and see the grades they have given students (implements homework assignments table) (10 points)
-10.  Students can join study groups made by their peers in the same sections as their own.(10 points)
+10.  Students can join study groups made by their peers in the same sections as their own, in this they can reserve times to use classrooms to study together (10 points)
 
 To run this code:
 1. Make sure the correct files are in the XAMPP file directory (something like):
