@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 24, 2024 at 10:32 PM
+-- Generation Time: Mar 24, 2024 at 10:40 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -275,7 +275,8 @@ CREATE TABLE `studygroup` (
   `course_id` text NOT NULL,
   `section_id` text NOT NULL,
   `classroom_id` text NOT NULL,
-  `studygroup_id` text NOT NULL
+  `time_slot_id` text NOT NULL,
+  `studygroup_id` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------

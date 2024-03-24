@@ -13,9 +13,12 @@ $name = $_SESSION['Email'];
 <body>
     <h1>University Website</h1>
     <h2>Student Homepage</h2>
-    <?php echo "Hello $name";?>
     <a href="ModifyInfo.php"><button>Modify Information</button></a>
     <p></p>
+    <a href="CreateStudyGroup.php"><button>Create a Study Group</button></a>
+    <p></p>
+    <a href="JoinStudyGroup.php"><button>Join a Study Group</button></a>
+
 
     <?php
     //enter server info
