@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 24, 2024 at 10:40 PM
+-- Generation Time: Mar 24, 2024 at 11:53 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -264,6 +264,17 @@ INSERT INTO `student` (`student_id`, `name`, `email`, `dept_name`) VALUES
 ('87623', 'Matricia', 'msi@student.uml.edu', 'Miner School of Computer & Information Sciences'),
 ('9271', 'Leon', 'lis@student.uml.edu', 'Miner School of Computer & Information Sciences'),
 ('9782', 'Kyle', 'ksi@student.uml.edu', 'Miner School of Computer & Information Sciences');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `studentinsg`
+--
+
+CREATE TABLE `studentinsg` (
+  `studygroup_id` text NOT NULL,
+  `student_id` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
