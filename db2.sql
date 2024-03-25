@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2024 at 10:06 PM
+-- Generation Time: Mar 25, 2024 at 10:48 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -38,19 +38,48 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`email`, `password`, `type`) VALUES
+('', '', 'student'),
 ('admin@uml.edu', '123456', 'admin'),
+('asd@student.uml.edu', 'githubrepository', 'student'),
 ('bus@student.uml.edu', 'hater', 'student'),
 ('Charles_Wilkes@uml.edu', '123456', 'instructor'),
+('cvk', 'gimmezomezaza', 'student'),
 ('dbadams@cs.uml.edu', '123456', 'instructor'),
+('dfg@student.uml.edu', 'THEMAN', 'student'),
+('djk@student.uml.edu', 'ikissyoonjoonforfun', 'student'),
+('efm@student.uml.edu', 'imbored', 'student'),
+('hel@student.uml.edu', 'delsym', 'student'),
+('hij@student.uml.edu', 'excusemebazinga', 'student'),
+('ier@student.uml.edu', 'imgoingthruchanges', 'student'),
 ('jhs@student.uml.edu', 'JACKHAMMER', 'student'),
+('jkh@student.uml.edu', 'hamburger', 'student'),
 ('Johannes_Weis@uml.edu', '123456', 'instructor'),
+('kfr@student.uml.edu', 'smallballs', 'student'),
 ('ksi@student.uml.edu', 'KyleInDenial', 'student'),
+('las@student.uml.edu', 'hellokitty', 'student'),
+('ldc@student.uml.edu', 'laptopgoburrr', 'student'),
 ('lis@student.uml.edu', 'homeisgone', 'student'),
+('lki@student.uml.edu', 'DICAPRIO', 'student'),
+('mbn@student.uml.edu', 'TIPMEPLZ', 'student'),
 ('msi@student.uml.edu', 'LILIESANDLOVE', 'student'),
+('oje@student.uml.edu', 'mymomisok', 'student'),
+('okk@student.uml.edu', 'eatadoriuji', 'student'),
+('owe@student.uml.edu', 'mydadiscool', 'student'),
+('per@student.uml.edu', 'SAINTPATRICK', 'student'),
+('ric@student.uml.edu', 'puppy', 'student'),
+('sbh@student.uml.edu', 'registerurmom', 'student'),
 ('shl@student.uml.edu', 'doggos', 'student'),
+('skd@student.uml.edu', 'urmom', 'student'),
 ('slin@cs.uml.edu', '123456', 'instructor'),
+('smw@student.uml.edu', 'baldursgate', 'student'),
+('tew@student.uml.edu', 'TIMMYTURNER', 'student'),
+('trg@student.uml.edu', 'itsgivingnurse', 'student'),
+('weo@student.uml.edu', 'ilabeledthemandevery', 'student'),
 ('wer@student.uml.edu', 'spells', 'student'),
-('Yelena_Rykalova@uml.edu', '123456', 'instructor');
+('wke@student.uml.edu', 'mountaindew', 'student'),
+('wsd@student.uml.edu', 'GAMER', 'student'),
+('Yelena_Rykalova@uml.edu', '123456', 'instructor'),
+('yue@student.uml.edu', 'MARIO', 'student');
 
 -- --------------------------------------------------------
 
@@ -64,14 +93,6 @@ CREATE TABLE `advise` (
   `start_date` date NOT NULL,
   `end_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `advise`
---
-
-INSERT INTO `advise` (`instructor_id`, `student_id`, `start_date`, `end_date`) VALUES
-('2', '123456', '2024-03-25', '2024-06-25'),
-('4', '201738', '2023-11-01', '2024-05-09');
 
 -- --------------------------------------------------------
 
@@ -183,7 +204,15 @@ CREATE TABLE `master` (
 --
 
 INSERT INTO `master` (`student_id`, `total_credits`) VALUES
-('26303', 0);
+('121357', 0),
+('151244', 0),
+('192440', 0),
+('274204', 0),
+('654132', 0),
+('662563', 0),
+('842125', 0),
+('942076', 0),
+('956125', 0);
 
 -- --------------------------------------------------------
 
@@ -217,8 +246,14 @@ CREATE TABLE `phd` (
 --
 
 INSERT INTO `phd` (`student_id`, `qualifier`, `proposal_defence_date`, `dissertation_defence_date`) VALUES
-('123456', '0', '0000-00-00', '0000-00-00'),
-('201738', '0', '0000-00-00', '0000-00-00');
+('102672', '0', '0000-00-00', '0000-00-00'),
+('132456', '0', '0000-00-00', '0000-00-00'),
+('210021', '0', '0000-00-00', '0000-00-00'),
+('412584', '0', '0000-00-00', '0000-00-00'),
+('720394', '0', '0000-00-00', '0000-00-00'),
+('842130', '0', '0000-00-00', '0000-00-00'),
+('845951', '0', '0000-00-00', '0000-00-00'),
+('945000', '0', '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -289,13 +324,34 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`student_id`, `name`, `email`, `dept_name`) VALUES
-('123456', 'Wizard', 'wer@student.uml.edu', 'Miner School of Computer & Information Sciences'),
-('201738', 'Brian', 'bus@student.uml.edu', 'Miner School of Computer & Information Sciences'),
-('26303', 'Sean', 'shl@student.uml.edu', 'Miner School of Computer & Information Sciences'),
-('4325', 'Jack', 'jhs@student.uml.edu', 'Miner School of Computer & Information Sciences'),
-('87623', 'Matricia', 'msi@student.uml.edu', 'Miner School of Computer & Information Sciences'),
-('92716', 'Leon', 'lis@student.uml.edu', 'Miner School of Computer & Information Sciences'),
-('9782', 'Kyle', 'ksi@student.uml.edu', 'Miner School of Computer & Information Sciences');
+('102672', 'Leonardo', 'lki@student.uml.edu', 'Miner School of Computer & Information Sciences'),
+('111229', 'Olsen', 'oje@student.uml.edu', 'Francis College of Engineering'),
+('121357', 'Kritta', 'kfr@student.uml.edu', 'Francis College of Engineering'),
+('123499', 'Czechoslovakia', 'cvk', 'Zuckerberg College of Health Sciences'),
+('124865', 'Wandon', 'wke@student.uml.edu', 'Miner School of Computer & Information Sciences'),
+('132283', 'Patrick', 'per@student.uml.edu', 'Miner School of Computer & Information Sciences'),
+('132456', 'William', 'wsd@student.uml.edu', 'Zuckerberg College of Health Sciences'),
+('142036', 'Matthew', 'mbn@student.uml.edu', 'Kennedy College of Sciences'),
+('151244', 'Daniel', 'dfg@student.uml.edu', 'Miner School of Computer & Information Sciences'),
+('192440', 'Joseph', 'jkh@student.uml.edu', 'Zuckerberg College of Health Sciences'),
+('192830', 'Richard', 'ric@student.uml.edu', 'Miner School of Computer & Information Sciences'),
+('210021', 'Lanna', 'ldc@student.uml.edu', 'Manning School of Business'),
+('274204', 'Yoshi', 'yue@student.uml.edu', 'Manning School of Business'),
+('412584', 'Tristana', 'trg@student.uml.edu', 'Zuckerberg College of Health Sciences'),
+('451384', 'Saddie', 'skd@student.uml.edu', 'Zuckerberg College of Health Sciences'),
+('457896', 'Emileigh', 'efm@student.uml.edu', 'Francis College of Engineering'),
+('632145', 'Okkotsu', 'okk@student.uml.edu', 'Francis College of Engineering'),
+('654132', 'Dokja', 'djk@student.uml.edu', 'Zuckerberg College of Health Sciences'),
+('662563', 'Hershey', 'hij@student.uml.edu', 'Kennedy College of Sciences'),
+('720394', 'Turner', 'tew@student.uml.edu', 'Francis College of Engineering'),
+('842125', 'America', 'asd@student.uml.edu', 'Francis College of Engineering'),
+('842130', 'Hellina', 'hel@student.uml.edu', 'Miner School of Computer & Information Sciences'),
+('845621', 'Sona', 'sbh@student.uml.edu', 'Francis College of Engineering'),
+('845951', 'Landon', 'las@student.uml.edu', 'Manning School of Business'),
+('942076', 'Owen', 'owe@student.uml.edu', 'Francis College of Engineering'),
+('942630', 'Wilhelm', 'weo@student.uml.edu', 'Francis College of Engineering'),
+('945000', 'Samamta', 'smw@student.uml.edu', 'Zuckerberg College of Health Sciences'),
+('956125', 'Iaian', 'ier@student.uml.edu', 'Miner School of Computer & Information Sciences');
 
 -- --------------------------------------------------------
 
@@ -392,9 +448,17 @@ CREATE TABLE `undergraduate` (
 --
 
 INSERT INTO `undergraduate` (`student_id`, `total_credits`, `class_standing`) VALUES
-('4325', 0, 'freshman'),
-('87623', 0, 'freshman'),
-('9782', 0, 'freshman');
+('111229', 0, 'freshman'),
+('123499', 0, 'freshman'),
+('124865', 0, 'freshman'),
+('132283', 0, 'freshman'),
+('142036', 0, 'freshman'),
+('192830', 0, 'freshman'),
+('451384', 0, 'freshman'),
+('457896', 0, 'freshman'),
+('632145', 0, 'freshman'),
+('845621', 0, 'freshman'),
+('942630', 0, 'freshman');
 
 -- --------------------------------------------------------
 
