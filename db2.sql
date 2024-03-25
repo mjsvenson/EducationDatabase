@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 24, 2024 at 11:53 PM
+-- Generation Time: Mar 25, 2024 at 10:06 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -65,6 +65,14 @@ CREATE TABLE `advise` (
   `end_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `advise`
+--
+
+INSERT INTO `advise` (`instructor_id`, `student_id`, `start_date`, `end_date`) VALUES
+('2', '123456', '2024-03-25', '2024-06-25'),
+('4', '201738', '2023-11-01', '2024-05-09');
+
 -- --------------------------------------------------------
 
 --
@@ -77,6 +85,17 @@ CREATE TABLE `classroom` (
   `room_number` varchar(7) NOT NULL,
   `capacity` decimal(4,0) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `classroom`
+--
+
+INSERT INTO `classroom` (`classroom_id`, `building`, `room_number`, `capacity`) VALUES
+('0001', 'Shah', '321', 30),
+('0002', 'Falmouth', '210', 45),
+('0003', 'Olney', '420', 200),
+('0004', 'Olsen', '333', 20),
+('0005', 'Perry', '246', 10);
 
 -- --------------------------------------------------------
 
@@ -95,6 +114,7 @@ CREATE TABLE `course` (
 --
 
 INSERT INTO `course` (`course_id`, `course_name`, `credits`) VALUES
+('COMP1000', 'Media Computing', 3),
 ('COMP1010', 'Computing I', 3),
 ('COMP1020', 'Computing II', 3),
 ('COMP2010', 'Computing III', 3),
@@ -116,7 +136,11 @@ CREATE TABLE `department` (
 --
 
 INSERT INTO `department` (`dept_name`, `location`) VALUES
-('Miner School of Computer & Information Sciences', 'Dandeneau Hall, 1 University Avenue, Lowell, MA 01854');
+('Francis College of Engineering', 'Southwick 250, 1 University Ave, Lowell, MA 01854'),
+('Kennedy College of Sciences', 'Olney Science Center, 265 Riverside St., Lowell, MA 01854'),
+('Manning School of Business', 'Pulichino Tong Building, 72 University Avenue, Lowell, MA 01854'),
+('Miner School of Computer & Information Sciences', 'Dandeneau Hall, 1 University Avenue, Lowell, MA 01854'),
+('Zuckerberg College of Health Sciences', 'Dugan Hall, 883 Broadway St, Lowell, MA 01854');
 
 -- --------------------------------------------------------
 
@@ -159,8 +183,7 @@ CREATE TABLE `master` (
 --
 
 INSERT INTO `master` (`student_id`, `total_credits`) VALUES
-('26303', 0),
-('9271', 0);
+('26303', 0);
 
 -- --------------------------------------------------------
 
@@ -207,6 +230,15 @@ CREATE TABLE `prereq` (
   `course_id` varchar(20) NOT NULL,
   `prereq_id` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `prereq`
+--
+
+INSERT INTO `prereq` (`course_id`, `prereq_id`) VALUES
+('COMP1020', 'COMP1010'),
+('COMP2010', 'COMP1020'),
+('COMP2040', 'COMP2010');
 
 -- --------------------------------------------------------
 
@@ -262,7 +294,7 @@ INSERT INTO `student` (`student_id`, `name`, `email`, `dept_name`) VALUES
 ('26303', 'Sean', 'shl@student.uml.edu', 'Miner School of Computer & Information Sciences'),
 ('4325', 'Jack', 'jhs@student.uml.edu', 'Miner School of Computer & Information Sciences'),
 ('87623', 'Matricia', 'msi@student.uml.edu', 'Miner School of Computer & Information Sciences'),
-('9271', 'Leon', 'lis@student.uml.edu', 'Miner School of Computer & Information Sciences'),
+('92716', 'Leon', 'lis@student.uml.edu', 'Miner School of Computer & Information Sciences'),
 ('9782', 'Kyle', 'ksi@student.uml.edu', 'Miner School of Computer & Information Sciences');
 
 -- --------------------------------------------------------

@@ -10,6 +10,10 @@
         <label for="dept_name">dept_name:</label><br>
         <select name="dept_name" id="dept_name">
             <option value="Miner School of Computer & Information Sciences">Miner School of Computer & Information Sciences</option>
+            <option value="Francis College of Engineering">Francis College of Engineering</option>
+            <option value="Kennedy College of Sciences">Kennedy College of Sciences</option>
+            <option value="Manning School of Business">Manning School of Business</option>
+            <option value="Zuckerberg College of Health Sciences">Zuckerberg College of Health Sciences</option>
         </select>
         <p></p>
         <label for="student_id">ID:</label><br>
