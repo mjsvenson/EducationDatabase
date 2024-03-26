@@ -21,7 +21,7 @@ $name = $_SESSION['Email'];
     <p></p>
     <a href="JoinStudyGroup.php"><button>Join a Study Group</button></a>
     <p></p>
-    <a href="BrowseClasses.php"><button>Browse Classes</button></a>
+    <a href="BrowseCourses.php"><button>Browse Classes</button></a>
 
     <?php
     //enter server info
