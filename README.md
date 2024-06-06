@@ -1,9 +1,7 @@
 # EducationDatabase
 An example of SQL knowledge using a university database
 
-Steps that are done: 1(Needs work), 2, 4, 5, 6, 7, 8
-
-Stuff that needs to be worked on:
+Features involved:
 
 1. A student can create an account and modify their information later. (The accounts for
 admin and instructors are created in advance.) (10 points)
